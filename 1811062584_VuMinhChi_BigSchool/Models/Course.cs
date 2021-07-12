@@ -9,7 +9,7 @@ namespace _1811062584_VuMinhChi_BigSchool.Models
     public class Course
     {
         public int CourseId { get; set; }
-
+        public bool IsCanceled { get; set; }
         public ApplicationUser Lecturer { get; set; }
         [Required]
         public string LecturerId { get; set; }

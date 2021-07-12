@@ -12,7 +12,7 @@ namespace _1811062584_VuMinhChi_BigSchool.App_Start
             config.MapHttpAttributeRoutes();
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id})",
+                routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional });
         }
     }

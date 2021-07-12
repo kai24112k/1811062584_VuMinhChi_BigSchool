@@ -1,0 +1,36 @@
+﻿@model IEnumerable<_1811062584_VuMinhChi_BigSchool.Models.Course>
+@{
+    ViewBag.Title = "Attending";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Attending</h2>
+<div class="row" style="background-color:aqua">
+    <ul class="course">
+        @foreach (var course in Model)
+        {
+            <li>
+                <div class="date">
+                    <div class="month">
+                        @course.DateTime.ToString("MM")
+                    </div>
+                    <div class="day">
+                        @course.DateTime.ToString("dd")
+                    </div>
+                </div>
+                <div class="details">
+                    <span class="lecturer">
+                        @course.Lecturer.Name
+                        
+                        <button class="btn btn-default btn-sm js toggle-follow" data-user-id="@course.LecturerId">Follow</button>
+                    </span>
+                    <span class="category">
+                        @course.Category.Name
+                    </span>
+                    <button data-course-id="@course.CourseId" class="btn btn-default btn-sm js-tongle-attendance">Going</button>
+                </div>
+            </li>
+        }
+
+    </ul>
+</div>

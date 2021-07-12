@@ -9,6 +9,7 @@ namespace _1811062584_VuMinhChi_BigSchool.ViewModels
 {
     public class CourseViewModel
     {
+        public int CourseId { get; set; }
         [Required(ErrorMessage = "Địa điểm không được trống")]
         public string Place { get; set; }
 
@@ -27,5 +28,13 @@ namespace _1811062584_VuMinhChi_BigSchool.ViewModels
         {
             return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get; set; }
+        public string Heading { get; set; }
+        public string Action 
+        {
+            get { return (CourseId != 0) ? "Update" : "Create"; }
+        }
+
     }
 }

@@ -19,6 +19,7 @@
                 <div class="details">
                     <span class="lecturer">
                         @course.Lecturer.Name
+                        
                         <button class="btn btn-default btn-sm js toggle-follow" data-user-id="@course.LecturerId">Follow</button>
                     </span>
                     <span class="category">
@@ -28,7 +29,6 @@
                 </div>
             </li>
         }
-
     </ul>
     @section scripts {
         <script>
@@ -43,7 +43,7 @@
                                 .addClass("btn-info")
                                 .text("Going");
                         }).fail(function () {
-                            alert("Register course sucessfully!");
+                            alert("Something Failed!");
                         });
                 });
             });
@@ -62,3 +62,4 @@
         </script>
     }
 </div>
+<div class="fb-comments" data-href="https://localhost:44347/Home/Index" data-width="" data-numposts="5"></div>
